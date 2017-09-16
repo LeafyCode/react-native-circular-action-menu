@@ -1,5 +1,5 @@
 import React, {
-  Component
+  Component,
 } from 'react';
 import {
   StyleSheet,
@@ -15,7 +15,7 @@ export default class ActionButtonItem extends Component {
     const offsetY = this.props.radius * Math.sin(this.props.angle);
     return (
       <Animated.View
-        style={[this.props.style,{
+        style={[{
             opacity: this.props.anim,
             width: this.props.size,
             height: this.props.size,
@@ -45,9 +45,7 @@ export default class ActionButtonItem extends Component {
       >
         <TouchableOpacity style={{flex:1}} activeOpacity={this.props.activeOpacity || 0.85} onPress={this.props.onPress}>
           <View
-            style={[
-              styles.actionButton,
-              {
+            style={[styles.actionButton,{
                 width: this.props.size,
                 height: this.props.size,
                 borderRadius: this.props.size / 2,
@@ -82,6 +80,5 @@ const styles = StyleSheet.create({
     shadowRadius: 1,
     backgroundColor: 'red',
     position: 'absolute',
-    marginTop: 10
   },
 });

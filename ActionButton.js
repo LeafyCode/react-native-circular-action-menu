@@ -44,6 +44,7 @@ export default class ActionButton extends Component {
     };
 
     this.timeout = null;
+    this.getActionContainerStyle = this.getActionContainerStyle.bind(this);
   }
 
   componentWillUnmount() {
@@ -59,7 +60,7 @@ export default class ActionButton extends Component {
     return [styles.overlay, styles.actionContainer, {
       alignItems,
       justifyContent,
-    }];
+    }, this.props.containerStyle];
   }
   getActionsStyle() {
     return [this.getButtonSize()];
