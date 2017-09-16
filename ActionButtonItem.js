@@ -1,6 +1,5 @@
 import React, {
-  Component,
-  PropTypes,
+  Component
 } from 'react';
 import {
   StyleSheet,
@@ -61,14 +60,6 @@ export default class ActionButtonItem extends Component {
   }
 
 }
-
-ActionButtonItem.propTypes = {
-  angle: PropTypes.number,
-  radius: PropTypes.number,
-  buttonColor: PropTypes.string,
-  onPress: PropTypes.func,
-  children: PropTypes.node.isRequired,
-};
 
 ActionButtonItem.defaultProps = {
   onPress: () => {},
